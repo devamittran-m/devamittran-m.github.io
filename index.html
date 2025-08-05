@@ -435,5 +435,26 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+  const toggle = document.getElementById('theme-switch');
+  const html = document.documentElement;
+
+  function applyTheme(theme) {
+    html.setAttribute('data-color-scheme', theme);
+    localStorage.setItem('theme', theme);
+    toggle.checked = theme === 'dark';
+  }
+
+  // Load theme from localStorage
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+
+  // Handle toggle
+  toggle.addEventListener('change', () => {
+    const newTheme = toggle.checked ? 'dark' : 'light';
+    applyTheme(newTheme);
+  });
+</script>
+
 </body>
 </html>
