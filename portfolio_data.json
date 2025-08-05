@@ -1,0 +1,183 @@
+{
+  "personal_info": {
+    "name": "Devamittran M",
+    "title": "Data Scientist | Turing Developer",
+    "current_role": "Data Scientist at Turing",
+    "specialization": "Backend Development for Gemini AI Training",
+    "location": "India",
+    "bio": "Passionate Data Scientist with expertise in machine learning, AI development, and backend systems. Currently working at Turing, collaborating with Google as the client, contributing to the backend of training 'Gemini' AI models. Dedicated to solving complex business problems through data-driven insights and innovative AI solutions.",
+    "contact": {
+      "email": "devamittran.m@example.com",
+      "linkedin": "https://www.linkedin.com/in/devamittran-m/",
+      "github": "https://github.com/devamittran-m",
+      "location": "India"
+    }
+  },
+  "skills": {
+    "programming_languages": [
+      "Python",
+      "R",
+      "SQL",
+      "JavaScript",
+      "Java"
+    ],
+    "machine_learning": [
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "XGBoost"
+    ],
+    "data_analysis": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly"
+    ],
+    "big_data": [
+      "Apache Spark",
+      "Hadoop",
+      "Kafka",
+      "Apache Airflow"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Redis",
+      "Elasticsearch"
+    ],
+    "cloud_platforms": [
+      "AWS",
+      "Google Cloud Platform",
+      "Azure",
+      "Docker",
+      "Kubernetes"
+    ],
+    "tools": [
+      "Jupyter",
+      "Git",
+      "Tableau",
+      "Power BI",
+      "MLflow",
+      "Apache Superset"
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Gemini AI Training Backend System",
+      "description": "Contributed to the backend infrastructure for Google's Gemini AI model training pipeline at Turing. Developed scalable data processing systems and optimized training workflows.",
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "Google Cloud Platform",
+        "Kubernetes",
+        "Apache Beam"
+      ],
+      "highlights": [
+        "Optimized data preprocessing pipeline reducing training time by 40%",
+        "Implemented distributed training architecture for large language models",
+        "Collaborated with Google engineers on model optimization strategies"
+      ],
+      "github_link": "https://github.com/devamittran-m/gemini-training-backend",
+      "demo_link": "https://demo.example.com/gemini-project",
+      "category": "AI/ML Engineering"
+    },
+    {
+      "id": 2,
+      "title": "Customer Churn Prediction Model",
+      "description": "Built an end-to-end machine learning pipeline to predict customer churn for a telecommunications company, achieving 92% accuracy with ensemble methods.",
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "Flask",
+        "Docker"
+      ],
+      "highlights": [
+        "Achieved 92% accuracy using Random Forest and XGBoost ensemble",
+        "Deployed model using Flask API with real-time predictions",
+        "Reduced customer churn by 25% through targeted retention campaigns"
+      ],
+      "github_link": "https://github.com/devamittran-m/customer-churn-prediction",
+      "demo_link": "https://churn-predictor.herokuapp.com",
+      "category": "Machine Learning"
+    },
+    {
+      "id": 3,
+      "title": "Real-time Sentiment Analysis Dashboard",
+      "description": "Developed a real-time sentiment analysis system for social media monitoring using NLP techniques and streaming data processing.",
+      "technologies": [
+        "Python",
+        "Apache Kafka",
+        "NLTK",
+        "Streamlit",
+        "AWS"
+      ],
+      "highlights": [
+        "Processed 10k+ tweets per minute with real-time sentiment scoring",
+        "Built interactive dashboard for trend visualization",
+        "Implemented multi-language sentiment analysis support"
+      ],
+      "github_link": "https://github.com/devamittran-m/sentiment-analysis-dashboard",
+      "demo_link": "https://sentiment-dashboard.streamlit.app",
+      "category": "NLP & Analytics"
+    },
+    {
+      "id": 4,
+      "title": "Time Series Forecasting for Sales Prediction",
+      "description": "Created a comprehensive forecasting system for retail sales prediction using advanced time series models and external factors.",
+      "technologies": [
+        "Python",
+        "Prophet",
+        "ARIMA",
+        "Plotly",
+        "PostgreSQL"
+      ],
+      "highlights": [
+        "Improved forecasting accuracy by 35% using Facebook Prophet",
+        "Incorporated seasonal patterns and holiday effects",
+        "Generated automated reports for business stakeholders"
+      ],
+      "github_link": "https://github.com/devamittran-m/sales-forecasting",
+      "demo_link": "https://sales-forecast-demo.herokuapp.com",
+      "category": "Time Series Analysis"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Turing",
+      "position": "Data Scientist",
+      "duration": "2023 - Present",
+      "location": "Remote",
+      "description": "Working on AI/ML projects in collaboration with Google, focusing on backend development for Gemini AI training systems.",
+      "achievements": [
+        "Contributed to Google's Gemini AI training infrastructure",
+        "Optimized large-scale data processing pipelines",
+        "Collaborated with international teams on cutting-edge AI research"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science in Data Science",
+      "institution": "Indian Institute of Technology",
+      "year": "2021-2023",
+      "gpa": "8.5/10"
+    },
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "institution": "Anna University",
+      "year": "2017-2021",
+      "gpa": "8.2/10"
+    }
+  ],
+  "certifications": [
+    "Google Cloud Professional Data Engineer",
+    "AWS Certified Machine Learning - Specialty",
+    "TensorFlow Developer Certificate",
+    "Microsoft Azure AI Engineer Associate"
+  ]
+}
