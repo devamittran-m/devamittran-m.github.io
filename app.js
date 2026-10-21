@@ -209,5 +209,19 @@
   }, { rootMargin: '-40% 0px -55% 0px' });
   sections.forEach((s) => s && navObserver.observe(s));
 
+
+  // ---------- 7. Certificate lightbox ----------
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCap = document.getElementById('lb-caption');
+  $$('[data-full]').forEach((el) => el.addEventListener('click', () => {
+    lbImg.src = el.dataset.full;
+    lbImg.alt = el.dataset.caption || '';
+    lbCap.textContent = el.dataset.caption || '';
+    if (typeof lb.showModal === 'function') lb.showModal();
+    else window.open(el.dataset.full, '_blank');
+  }));
+  lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
