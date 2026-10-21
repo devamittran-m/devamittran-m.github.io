@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literature Survey: Foundation Models in Financial Signal Processing | Devamittran M</title>
+  <meta name="description" content="Notes from Devamittran M's literature survey at IIT Kanpur on foundation models in financial signal processing. Note 1: pretrained forecasting models such as TimesFM, Moirai and Chronos on daily stock returns.">
+  <meta name="author" content="Devamittran M">
+  <link rel="canonical" href="https://devamittran-m.github.io/literature-survey/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Devamittran M">
+  <meta property="og:title" content="Pretrained forecasting models on stock returns: a cheaper baseline, not an edge">
+  <meta property="og:description" content="Notes from my literature survey on foundation models in financial signal processing.">
+  <meta property="og:image" content="https://devamittran-m.github.io/artifacts/profile.jpg">
+  <meta property="og:url" content="https://devamittran-m.github.io/literature-survey/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../artifacts/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Pretrained forecasting models on stock returns: a cheaper baseline, not an edge",
+    "datePublished": "2026-10-21",
+    "author": { "@type": "Person", "name": "Devamittran M", "url": "https://devamittran-m.github.io/" },
+    "about": ["Financial signal processing", "Time series foundation models", "Financial return forecasting"],
+    "citation": "https://arxiv.org/abs/2606.27100",
+    "isPartOf": { "@type": "Blog", "name": "Literature survey: foundation models in financial signal processing", "url": "https://devamittran-m.github.io/literature-survey/" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="../">Devamittran M</a>
+      <nav aria-label="Site">
+        <a href="../">Home</a>
+        <a href="./" class="active">Literature survey</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch between dark and light theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap survey">
+    <a class="back-link" href="../">Back to portfolio</a>
+
+    <header class="survey-head">
+      <p class="survey-kicker">Literature survey at IIT Kanpur</p>
+      <h1>Foundation models in financial signal processing</h1>
+      <p class="survey-intro">Notes from my survey of the research on foundation models applied to financial time series. For each paper, the question I keep asking is whether it actually holds up, not just whether it is new.</p>
+    </header>
+
+    <!-- ================= NOTE 1 ================= -->
+    <article class="note" id="note-1">
+      <div class="note-meta">
+        <span class="tag t-quant">Note 1</span>
+        <time datetime="2026-10-21">October 2026</time>
+      </div>
+      <h2 class="note-title">Pretrained forecasting models on stock returns: a cheaper baseline, not an edge</h2>
+
+      <ul class="glance" aria-label="The study at a glance">
+        <li><strong>6</strong><span>pretrained models, used out of the box</span></li>
+        <li><strong>5</strong><span>large US stocks, daily returns</span></li>
+        <li><strong>8 of 10</strong><span>tasks won by pretrained models</span></li>
+        <li><strong>2</strong><span>cases that beat a zero forecast with statistical significance</span></li>
+      </ul>
+
+      <div class="note-body">
+        <p>One of the most exciting parts of being at IIT Kanpur is the research culture around us. We are constantly exposed to high impact work in our domain and encouraged to engage with it critically, rather than just read it. You quickly learn to ask, “Does this actually hold up?” rather than just, “Is this new?”</p>
+
+        <p>That question has shaped how I’m approaching financial signal processing, especially the wave of foundation models now being applied to financial time series. One paper from our literature survey has stayed with me.</p>
+
+        <h3>The study</h3>
+        <p><a href="https://www.linkedin.com/in/dr-miquel-noguer-i-alonso-7242345/" target="_blank" rel="noopener">Dr Miquel Noguer i Alonso</a> and <a href="https://www.linkedin.com/in/rodolfopf/" target="_blank" rel="noopener">Rodolfo Pereira Franklin</a> took six pretrained forecasting models, including Google’s TimesFM, Salesforce’s Moirai and Amazon’s Chronos. They used them straight out of the box on daily returns for Apple, Amazon, Google, JPMorgan and Meta, and compared them with five neural networks trained from scratch on each stock.</p>
+
+        <p>The pretrained models won 8 of the 10 tasks. But on Apple and JPMorgan, the winning model still did worse than simply forecasting a return of zero. Only two of the cases they tested beat that zero baseline in a statistically meaningful way.</p>
+
+        <h3>Why the pretrained models win</h3>
+        <p>What stood out to me was the authors’ explanation of why the pretrained models win at all. It isn’t necessarily because they understand markets. When all you have is one stock’s price history, a model that arrives with sensible assumptions makes fewer mistakes than one learning everything from scratch. Meta showed this advantage isn’t universal: there, a model trained only on Meta’s own history beat every foundation model.</p>
+
+        <h3>My read</h3>
+        <blockquote class="takeaway">Generic pretraining gives you a cheaper baseline, not an edge.</blockquote>
+        <p>Past returns carry very little information about future ones, and a better model can’t create signal that isn’t there. The more promising direction may be foundation models pretrained on financial data itself, which related work suggests closes much of the gap.</p>
+      </div>
+
+      <footer class="note-links">
+        <a class="btn btn-solid" href="https://arxiv.org/abs/2606.27100" target="_blank" rel="noopener" data-goatcounter-click="click-survey-paper">Read the paper on arXiv</a>
+        <a class="btn social s-linkedin" href="https://lnkd.in/p/dVgib6i5" target="_blank" rel="noopener" data-goatcounter-click="click-survey-linkedin-post"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Discuss on LinkedIn</a>
+        <p class="cite">Noguer i Alonso, M. and Pereira Franklin, R. (2026). arXiv 2606.27100.</p>
+      </footer>
+    </article>
+
+    <section class="survey-cta">
+      <h2>More notes coming</h2>
+      <p>I’ll add a note here for each paper in the survey. If you’re working on financial time series or foundation models and want to compare notes, I’d love to hear from you.</p>
+      <a class="btn" href="mailto:devamittranmohan@gmail.com?subject=Your%20literature%20survey" data-goatcounter-click="click-survey-email">Email me</a>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© <span id="year">2026</span> Devamittran M</p>
+    <a class="cert-link" href="../">Back to portfolio</a>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      document.getElementById('theme-toggle').addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+  <!-- Visitor analytics: GoatCounter (privacy friendly, no cookies) -->
+  <script data-goatcounter="https://devamittran.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

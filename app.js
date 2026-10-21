@@ -198,7 +198,7 @@
   });
 
   // ---------- 6. Active nav link ----------
-  const links = $$('.topbar nav a');
+  const links = $$('.topbar nav a').filter((a) => a.getAttribute('href').startsWith('#'));
   const sections = links.map((a) => document.querySelector(a.getAttribute('href')));
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach((e) => {

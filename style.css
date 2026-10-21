@@ -394,6 +394,52 @@ a { color: inherit; }
 .org-logo-fill { background: #000; }
 .org-logo.org-logo-fill img, .affiliations .org-logo.org-logo-fill img { width: 100%; height: 100%; object-fit: cover; }
 
+/* ---------- Recent work (main page) ---------- */
+.recent-card {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end;
+  padding: 28px; border-radius: var(--r-lg); text-decoration: none; color: var(--ink);
+  background: linear-gradient(120deg, color-mix(in srgb, var(--quant) 14%, var(--bg-2)), var(--bg-2) 65%);
+  border: 1px solid var(--line); transition: border-color .2s, transform .2s;
+}
+.recent-card:hover { border-color: var(--quant); transform: translateY(-2px); }
+.recent-card h3 { margin: 10px 0 8px; font-size: 1.375rem; line-height: 1.25; letter-spacing: -0.015em; max-width: 34ch; }
+.recent-card p { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+.recent-go { font-weight: 700; color: var(--quant); white-space: nowrap; }
+.recent-card:hover .recent-go { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- Literature survey page ---------- */
+.survey { max-width: 820px; padding-top: 40px; padding-bottom: 80px; }
+.back-link { display: inline-block; font-size: var(--fs-small); color: var(--ink-soft); text-decoration: none; margin-bottom: 32px; }
+.back-link:hover { color: var(--ink); }
+.survey-kicker { margin: 0 0 10px; color: var(--quant); font-weight: 600; font-size: var(--fs-small); }
+.survey-head h1 { font-size: clamp(2.25rem, 1.4rem + 3.5vw, 3.75rem); font-weight: 850; letter-spacing: -0.035em; line-height: 1; margin: 0 0 18px; }
+.survey-intro { color: var(--ink-soft); font-size: 1.125rem; margin: 0 0 48px; max-width: 62ch; }
+.note { padding: 32px clamp(20px, 4vw, 40px) 36px; border-radius: var(--r-lg); background: var(--bg-2); border: 1px solid var(--line); }
+.note-meta { display: flex; align-items: center; gap: 12px; font-size: var(--fs-small); color: var(--ink-soft); }
+.note-title { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.125rem); line-height: 1.15; letter-spacing: -0.025em; margin: 14px 0 24px; }
+.glance { list-style: none; padding: 0; margin: 0 0 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.glance li { padding: 14px 16px; border-radius: var(--r-md); background: var(--bg); border: 1px solid var(--line); }
+.glance strong { display: block; font-size: 1.75rem; font-weight: 800; color: var(--quant); line-height: 1.1; font-feature-settings: "tnum" 1; }
+.glance span { display: block; font-size: 0.8125rem; color: var(--ink-soft); line-height: 1.4; margin-top: 4px; }
+.note-body { font-size: 1.0625rem; line-height: 1.75; }
+.note-body p { margin: 0 0 1.1em; max-width: 68ch; }
+.note-body h3 { font-size: 1.125rem; margin: 1.8em 0 0.6em; }
+.note-body a { text-decoration-color: var(--quant); text-underline-offset: 3px; }
+.takeaway {
+  margin: 0 0 1em; padding: 16px 20px; border-left: 4px solid var(--quant);
+  background: color-mix(in srgb, var(--quant) 10%, transparent); border-radius: 0 var(--r-md) var(--r-md) 0;
+  font-size: 1.25rem; font-weight: 700; line-height: 1.4;
+}
+.note-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.cite { flex-basis: 100%; margin: 6px 0 0; font-size: var(--fs-small); color: var(--ink-soft); }
+.survey-cta { margin-top: 48px; }
+.survey-cta h2 { font-size: 1.375rem; margin: 0 0 8px; }
+.survey-cta p { color: var(--ink-soft); margin: 0 0 18px; max-width: 60ch; }
+@media (max-width: 720px) {
+  .glance { grid-template-columns: repeat(2, 1fr); }
+  .recent-card { grid-template-columns: 1fr; }
+}
+
 /* ---------- Social buttons (brand colour on hover) ---------- */
 .social svg { flex-shrink: 0; transition: transform .25s; }
 .social:hover svg { transform: scale(1.12); }
