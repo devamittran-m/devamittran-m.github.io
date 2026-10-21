@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devamittran M — Data Scientist, Financial Signal Processing</title>
-  <meta name="description" content="Devamittran M — data scientist at Turing and IIT Kanpur student working on financial signal processing and foundation models. CFA Level I candidate.">
+  <title>Devamittran M | Data Scientist, MBA at IIT Kanpur</title>
+  <meta name="description" content="Devamittran M. Data scientist and MBA candidate at IIT Kanpur working across quant research, analytics, and AI engineering and policy. CFA Level I candidate. Open to freelance projects.">
   <meta property="og:title" content="Devamittran M">
-  <meta property="og:description" content="Data scientist working on financial signal processing and foundation models.">
+  <meta property="og:description" content="Data scientist working across quant research, analytics, and AI. Open to freelance projects.">
   <meta property="og:image" content="https://devamittran-m.github.io/artifacts/profile.png">
   <meta property="og:url" content="https://devamittran-m.github.io/">
   <link rel="icon" href="artifacts/profile.png">
@@ -15,40 +15,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
-    // Apply saved theme before paint to avoid a flash
-    try {
-      var t = localStorage.getItem('theme');
-      if (t) document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar">
-    <a class="wordmark" href="#top">Devamittran M</a>
-    <nav aria-label="Sections">
-      <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
-    </button>
+    <div class="topbar-inner">
+      <a class="wordmark" href="#top">Devamittran M</a>
+      <nav aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#freelance">Freelance</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch between dark and light theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+      <a class="btn btn-solid btn-sm" href="#contact">Work with me</a>
+    </div>
   </header>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero wrap" id="top">
       <div class="hero-text">
+        <p class="cfa-badge">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 1.5l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 13.9l-4.8 2.5.9-5.4L2.2 7.2l5.4-.8z" fill="currentColor"/></svg>
+          CFA Level I Candidate
+        </p>
         <h1>Devamittran M</h1>
-        <p class="lede">I work on pulling signal out of noisy financial data — and on what foundation models change about that.</p>
-        <p class="hero-facts">Data Scientist at Turing. Student at IIT Kanpur. CFA Level I candidate.</p>
+        <p class="lede">I turn messy data into decisions, across markets, supply chains and AI systems.</p>
+        <p class="hero-facts">MBA candidate at IIT Kanpur. Two years as a data scientist on Google Gemini at Turing. IEEE published researcher. Freelance data scientist.</p>
+        <p class="availability"><span class="pulse" aria-hidden="true"></span>Open to freelance projects and research collaborations</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" id="resume-link" href="resume.pdf" download>Download resume</a>
-          <a class="btn" href="https://www.linkedin.com/in/devamittran-m-2723a3269/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-solid" href="mailto:devamittranmohan@gmail.com?subject=Hello%20Devamittran">Email me</a>
+          <a class="btn" id="resume-link" href="resume.pdf" download>Download resume</a>
+          <a class="btn" href="https://lnkd.in/p/dVgib6i5" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/devamittran-m" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
@@ -61,126 +67,246 @@
       </figure>
     </section>
 
-    <!-- Signature: noisy series vs filtered estimate -->
-    <section class="signal" aria-label="Illustration: a noisy price series and its filtered estimate">
+    <!-- ================= KALMAN PLAYGROUND ================= -->
+    <section class="wrap playground" aria-labelledby="pg-title">
+      <div class="pg-head">
+        <div>
+          <h2 id="pg-title" class="pg-title">Try it: a Kalman filter on a noisy series</h2>
+          <p class="pg-sub">The grey line is what you observe. The amber line is the filter's estimate of the hidden trend. Slide to change how quickly it trusts new data.</p>
+        </div>
+        <div class="pg-readout" aria-live="polite">
+          <span class="readout-label">Tracking error</span>
+          <span class="readout-value" id="err-value">0.00</span>
+        </div>
+      </div>
       <canvas id="signal-canvas" aria-hidden="true"></canvas>
-      <div class="signal-caption">
-        <p><span class="key key-noise"></span>Observed series <span class="key key-signal"></span>Filtered estimate</p>
-        <button type="button" class="text-btn" id="resample">Draw a new sample</button>
+      <div class="pg-controls">
+        <label class="slider">
+          <span>Smooth</span>
+          <input type="range" id="gain" min="0" max="100" value="35" aria-label="Filter responsiveness">
+          <span>Responsive</span>
+        </label>
+        <label class="toggle-line"><input type="checkbox" id="show-truth"> Show the true trend</label>
+        <button type="button" class="btn btn-sm" id="resample">New sample</button>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="row" id="about">
-      <h2>About</h2>
-      <div class="content prose">
-        <p>I'm a data scientist at Turing, where I work with Google as the client on the backend of training the Gemini models. Alongside that, I'm at IIT Kanpur, where my focus has shifted toward financial signal processing: estimation, filtering and forecasting on market data.</p>
-        <p>The question I keep coming back to is how large pretrained models — trained on text or on huge collections of time series — fit into a field built on classical statistical methods. My literature survey is where I'm working that out.</p>
-      </div>
-    </section>
+    <!-- ================= TRACKS + WORK ================= -->
+    <section class="wrap section" id="work" aria-labelledby="work-title">
+      <h2 id="work-title" class="section-title">What I work on</h2>
+      <p class="section-intro">Three areas I build and research in. Pick one to filter my projects and experience.</p>
 
-    <!-- ============ RESEARCH ============ -->
-    <section class="row" id="research">
-      <h2>Research</h2>
-      <div class="content">
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Foundation models in financial signal processing</h3>
-            <span class="status">Literature survey, in progress</span>
-          </div>
-          <p>A survey of how foundation models — large pretrained time-series and language models — are being applied to financial signals, where they improve on classical methods, and where they don't yet hold up.</p>
-          <p class="muted">The write-up will be posted here when it's ready.</p>
+      <div class="tracks" role="group" aria-label="Filter by area">
+        <button class="track" data-track="quant" aria-pressed="false">
+          <span class="track-name">Quant research</span>
+          <span class="track-desc">Financial signal processing, time series, backtesting, and how foundation models change the field.</span>
+        </button>
+        <button class="track" data-track="analytics" aria-pressed="false">
+          <span class="track-name">Analytics</span>
+          <span class="track-desc">Supply chain and business analytics: forecasting, dashboards, SQL, and turning data into decisions.</span>
+        </button>
+        <button class="track" data-track="ai" aria-pressed="false">
+          <span class="track-name">AI engineering and policy</span>
+          <span class="track-desc">LLM agents, RAG and evaluation, plus research on how AI should be governed and designed responsibly.</span>
+        </button>
+      </div>
+      <p class="filter-status" id="filter-status" aria-live="polite">Showing everything. <button type="button" class="link-btn" id="clear-filter" hidden>Show all</button></p>
+
+      <h3 class="sub-title">Projects and research</h3>
+      <div class="projects" id="projects">
+        <article class="project" data-tracks="quant ai">
+          <div class="project-tags"><span class="tag t-quant">Quant</span><span class="tag t-ai">AI</span></div>
+          <h4>Foundation models in financial signal processing</h4>
+          <p class="project-meta">Literature survey, in progress</p>
+          <p>Surveying how large pretrained time series and language models are being applied to financial signals, where they beat classical methods, and where they still fall short.</p>
+        </article>
+
+        <article class="project" data-tracks="quant">
+          <div class="project-tags"><span class="tag t-quant">Quant</span></div>
+          <h4>UWB radar based human vital signal and range detection beyond obstacles</h4>
+          <p class="project-meta">IEEE CONECCT 2024, published on IEEE Xplore</p>
+          <p>Coauthored a peer reviewed paper on extracting breathing and heartbeat signals from through wall radar data. Proposed a clutter reduction pipeline using SVD, exponential weight subtraction and moving average filtering that outperformed Fourier based baselines, then reconstructed vital signs with Empirical Mode Decomposition.</p>
+          <p class="project-why">Why it matters here: the same toolkit of decomposing and denoising signals carries straight over to financial time series.</p>
+        </article>
+
+        <article class="project" data-tracks="quant">
+          <div class="project-tags"><span class="tag t-quant">Quant</span></div>
+          <h4>Moving average crossover backtester in C++</h4>
+          <p class="project-meta">Personal project, 2024</p>
+          <p>A command line backtester that loads historical OHLC data from CSV, simulates a moving average crossover strategy, tracks positions and realised P&amp;L, and reports trades, win rate and cumulative return. Rolling windows are computed with std::deque.</p>
+        </article>
+
+        <article class="project" data-tracks="ai quant analytics">
+          <div class="project-tags"><span class="tag t-ai">AI</span><span class="tag t-quant">Quant</span><span class="tag t-analytics">Analytics</span></div>
+          <h4>AI powered financial chatbot</h4>
+          <p class="project-meta">BCG GenAI job simulation on Forage, April 2026</p>
+          <p>Pulled and interpreted financial data from company 10K and 10Q filings through the SEC EDGAR Company Facts API, and built a chatbot that answers questions about a company's financials in plain language.</p>
+        </article>
+
+        <article class="project" data-tracks="ai">
+          <div class="project-tags"><span class="tag t-ai">AI</span></div>
+          <h4>Local RAG assistant over personal notes</h4>
+          <p class="project-meta">Personal project, 2024</p>
+          <p>Indexes a folder of markdown notes into a local vector store with sentence transformer embeddings and answers questions through a FastAPI endpoint. Logs retrieved chunks next to every answer, tracks latency and token use, and falls back safely when retrieval confidence is low.</p>
+        </article>
+
+        <article class="project" data-tracks="analytics ai">
+          <div class="project-tags"><span class="tag t-analytics">Analytics</span><span class="tag t-ai">AI</span></div>
+          <h4>Digital Maturity Score for Deloitte</h4>
+          <p class="project-meta">Research associate, Amrita School of Business</p>
+          <p>Turned qualitative interview transcripts into a quantitative readiness score. Classified transcripts into four transformation categories with BERT and TF IDF, then scored maturity with cosine similarity and weighted scoring.</p>
+        </article>
+
+        <article class="project" data-tracks="ai analytics">
+          <div class="project-tags"><span class="tag t-ai">AI</span><span class="tag t-analytics">Analytics</span></div>
+          <h4>COW KIN: deep learning for dairy health</h4>
+          <p class="project-meta">Research intern, Sony Semiconductor Solutions</p>
+          <p>Predicted cattle Body Condition Score from images for early disease detection. Benchmarked InceptionV3, VGG 19 and MobileNetV3; VGG 19 reached 99.59% accuracy on held out data and was deployed on a Raspberry Pi 4B with a live capture pipeline.</p>
         </article>
       </div>
+      <p class="more-note" data-tracks="analytics">More supply chain and analytics projects are on the way.</p>
     </section>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="row" id="experience">
-      <h2>Experience</h2>
-      <div class="content">
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Data Scientist, Turing</h3>
-            <span class="status">2023 – present</span>
-          </div>
-          <p>Backend work for Gemini model training, with Google as the client.</p>
-          <ul>
-            <li>Contributing to data-processing pipelines that feed large-scale model training</li>
-            <li>Optimising large-scale data workflows</li>
-            <li>Working with distributed, international teams</li>
-          </ul>
-        </article>
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="wrap section" id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title" class="section-title">Experience</h2>
+      <p class="section-intro">Click a role to see what I did.</p>
+
+      <ol class="timeline">
+        <li class="role" data-tracks="ai analytics">
+          <details open>
+            <summary>
+              <span class="role-dates">May 2024 to Jun 2026</span>
+              <span class="role-title">Data Scientist, Highbrow Technology (Turing)</span>
+              <span class="role-sub">Google Gemini: ICE chaining and generalized agents</span>
+            </summary>
+            <ul>
+              <li>Built an MCP agent on Google Gemini that plans and executes sequences of API calls to complete complex user requests on its own.</li>
+              <li>Engineered a simulated world of mock APIs, databases and user scenarios (Jira, Slack, Terminal, Google Workspace) so the agent could be trained and tested safely.</li>
+              <li>Designed a three stage verification framework (initial assertion, action, final assertion) that scores the agent on real backend state changes.</li>
+              <li>Delivered supervised fine tuning data and Python notebooks to Google research teams under Responsible AI guidelines.</li>
+              <li>Worked on the Google Cloud SQL initiative: validated and rewrote BigQuery SQL, generated synthetic GCS datasets, and solved DABStep benchmark queries to evaluate model reasoning.</li>
+            </ul>
+          </details>
+        </li>
+        <li class="role" data-tracks="analytics ai">
+          <details>
+            <summary>
+              <span class="role-dates">Aug 2023 to Feb 2024</span>
+              <span class="role-title">Research Associate, Amrita School of Business</span>
+              <span class="role-sub">Digital transformation analytics, with Deloitte</span>
+            </summary>
+            <ul>
+              <li>Worked under Dr. Radhakrishnan Balakrishnan on a Deloitte proof of concept to measure digital transformation maturity across organisations.</li>
+              <li>Built NLP pipelines with BERT and TF IDF to classify interview transcripts into value, stakeholder, technology and organisation driven categories.</li>
+              <li>Designed the Digital Maturity Score and documented the trade offs of each method in the final deliverables.</li>
+            </ul>
+          </details>
+        </li>
+        <li class="role" data-tracks="ai">
+          <details>
+            <summary>
+              <span class="role-dates">Jan 2023 to Oct 2023</span>
+              <span class="role-title">Research Intern, Sony Semiconductor Solutions</span>
+              <span class="role-sub">COW KIN: deep learning for dairy health</span>
+            </summary>
+            <ul>
+              <li>Trained PyTorch models to estimate Body Condition Score from images for early detection of disease and metabolic disorders.</li>
+              <li>Benchmarked three architectures with transfer learning; VGG 19 reached 99.59% accuracy.</li>
+              <li>Deployed the model on a Raspberry Pi 4B with an OpenCV capture pipeline and a live GUI, validated in field trials.</li>
+            </ul>
+          </details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= FREELANCE ================= -->
+    <section class="wrap section freelance" id="freelance" aria-labelledby="fl-title">
+      <div class="freelance-head">
+        <h2 id="fl-title" class="section-title">Freelance data science</h2>
+        <p class="section-intro">I take on focused projects for startups, researchers and small teams. Tell me the problem and I'll tell you honestly whether I'm the right fit.</p>
+      </div>
+      <ul class="services">
+        <li><h4>Analytics and dashboards</h4><p>SQL, data cleaning, KPI dashboards, and forecasting for operations and supply chains.</p></li>
+        <li><h4>LLM and agent systems</h4><p>RAG assistants, AI agents, and evaluation frameworks that show whether a model actually works.</p></li>
+        <li><h4>Quant and time series</h4><p>Signal extraction, backtesting, and statistical modelling on market or sensor data.</p></li>
+        <li><h4>Research support</h4><p>Literature reviews, experiment design, and clear write ups for AI policy and applied research.</p></li>
+      </ul>
+      <a class="btn btn-solid" href="mailto:devamittranmohan@gmail.com?subject=Freelance%20project">Start a conversation</a>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="wrap section" id="education" aria-labelledby="edu-title">
+      <h2 id="edu-title" class="section-title">Education and credentials</h2>
+      <div class="edu-grid">
+        <div class="edu-item edu-highlight">
+          <p class="edu-when">2026 to 2028</p>
+          <h4>MBA, Indian Institute of Technology Kanpur</h4>
+          <p>CGPA 10.0 out of 10 so far.</p>
+        </div>
+        <div class="edu-item edu-highlight">
+          <p class="edu-when">Exam February 2027</p>
+          <h4>CFA Level I Candidate</h4>
+          <p>CFA Institute.</p>
+        </div>
+        <div class="edu-item">
+          <p class="edu-when">2020 to 2024</p>
+          <h4>B.Tech, Electronics and Communication Engineering</h4>
+          <p>Amrita Vishwa Vidyapeetham, Coimbatore. Coursework in probability and random processes, linear algebra, signal processing and stochastic systems.</p>
+        </div>
+        <div class="edu-item">
+          <p class="edu-when">August 2026</p>
+          <h4>SQL (Intermediate) Certification</h4>
+          <p>HackerRank.</p>
+        </div>
+        <div class="edu-item">
+          <p class="edu-when">April 2026</p>
+          <h4>GenAI Job Simulation</h4>
+          <p>Boston Consulting Group, on Forage.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ============ CREDENTIALS ============ -->
-    <section class="row" id="credentials">
-      <h2>Education and credentials</h2>
-      <div class="content">
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Indian Institute of Technology Kanpur</h3>
-            <span class="status">Current</span>
-          </div>
-                  </article>
-        <article class="entry">
-          <div class="entry-head">
-            <h3>CFA Level I Candidate</h3>
-            <span class="status">Exam February 2027</span>
-          </div>
-          <p>CFA Institute. Registered for the Level I exam, covering ethics, quantitative methods, economics, financial reporting, equity, fixed income, derivatives and portfolio management.</p>
-        </article>
-      </div>
+    <!-- ================= SKILLS ================= -->
+    <section class="wrap section" id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, SQL, C and C++, Shell and Bash</dd></div>
+        <div><dt>Quant and statistics</dt><dd>Time series analysis, statistical inference, predictive modelling, signal processing (SVD, EMD, FFT), backtesting</dd></div>
+        <div><dt>Machine learning</dt><dd>PyTorch, scikit learn, deep learning, computer vision, reinforcement learning, feature engineering</dd></div>
+        <div><dt>LLMs and agents</dt><dd>Transformers, RAG, supervised fine tuning, LangChain, LangGraph, MCP, agent orchestration, evaluation and benchmarking</dd></div>
+        <div><dt>Data and tooling</dt><dd>NumPy, pandas, SciPy, OpenCV, FastAPI, MySQL, BigQuery, Google Cloud, Linux, Git, dashboards</dd></div>
+      </dl>
     </section>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="row" id="projects">
-      <h2>Projects</h2>
-      <div class="content">
-        <article class="entry">
-          <div class="entry-head">
-            <h3><a href="https://github.com/devamittran-m/Text-Classification-on-Consumer-Complaint-Dataset" target="_blank" rel="noopener">Consumer complaint text classification</a></h3>
-            <span class="status">Python, NLP</span>
-          </div>
-          <p>Text classification on a consumer complaint dataset, in a Jupyter notebook.</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <h3><a href="https://github.com/devamittran-m/Java-Rest-API-with-Frontend-UI" target="_blank" rel="noopener">Task manager REST API with web UI</a></h3>
-            <span class="status">Java, JavaScript</span>
-          </div>
-          <p>A Java REST API for searching, creating and deleting tasks, with a browser front end on top. <a href="https://github.com/devamittran-m/Java-REST-API-example" target="_blank" rel="noopener">API-only version</a>.</p>
-        </article>
-        <p class="muted next">New projects on financial time series are in progress and will be added here.</p>
-      </div>
+    <!-- ================= BEYOND WORK ================= -->
+    <section class="wrap section" id="beyond" aria-labelledby="beyond-title">
+      <h2 id="beyond-title" class="section-title">Beyond work</h2>
+      <ul class="beyond">
+        <li><strong>Bhumi NGO, Chennai.</strong> Catalyse Club Coordinator (2024 to 2025), leading volunteer teams on cleanups, donation drives and community outreach. Received the Rising Star Award in 2024.</li>
+        <li><strong>Amrita Green Hackathon.</strong> Third place in 2023, leading a team that built IoT smart street lights for energy efficiency.</li>
+        <li><strong>Toastmasters and the Amrita Centre for Entrepreneurship.</strong> Organised hackathons and pitch events, and competed in speaking contests.</li>
+        <li><strong>Music and sport.</strong> Western flute (ABRSM Grade 2) and competitive tennis (AITA and TNTA).</li>
+      </ul>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="row" id="skills">
-      <h2>Skills</h2>
-      <div class="content">
-        <dl class="skills">
-          <div><dt>Languages</dt><dd>Python, R, SQL, JavaScript, Java</dd></div>
-          <div><dt>Machine learning</dt><dd>scikit-learn, PyTorch, TensorFlow, Keras, XGBoost</dd></div>
-          <div><dt>Data analysis</dt><dd>pandas, NumPy, Matplotlib, Seaborn, Plotly</dd></div>
-          <div><dt>Data and infrastructure</dt><dd>Apache Spark, PostgreSQL, MongoDB, Docker, Google Cloud Platform, AWS</dd></div>
-          <div><dt>Tools</dt><dd>Jupyter, Git, MLflow, Tableau, Power BI</dd></div>
-        </dl>
+    <!-- ================= CONTACT ================= -->
+    <section class="wrap section contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="contact-title">Let's talk</h2>
+      <p class="contact-lede">Freelance work, research collaboration, or just a conversation about quant, analytics or AI. I reply to every message.</p>
+      <div class="contact-row">
+        <a class="email-big" href="mailto:devamittranmohan@gmail.com">devamittranmohan@gmail.com</a>
+        <button type="button" class="btn btn-sm" id="copy-email" data-email="devamittranmohan@gmail.com">Copy email</button>
       </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="row" id="contact">
-      <h2>Contact</h2>
-      <div class="content prose">
-        <p>The best way to reach me is a message on <a href="https://www.linkedin.com/in/devamittran-m-2723a3269/" target="_blank" rel="noopener">LinkedIn</a>. I'm happy to talk about financial signal processing, time-series models, or research collaborations.</p>
-        <p>Code is on <a href="https://github.com/devamittran-m" target="_blank" rel="noopener">GitHub</a>.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://lnkd.in/p/dVgib6i5" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn" href="https://github.com/devamittran-m" target="_blank" rel="noopener">See my GitHub</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year">2026</span> Devamittran M</p>
+  <footer class="footer wrap">
+    <p>© <span id="year">2026</span> Devamittran M. Built by hand and hosted on GitHub Pages.</p>
   </footer>
 
   <script src="app.js"></script>
