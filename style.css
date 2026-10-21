@@ -366,6 +366,15 @@ a { color: inherit; }
   .lb-close { top: 8px; right: 8px; }
 }
 
+
+.honors { grid-template-columns: repeat(3, 1fr); }
+.role-extra { padding: 0 22px 18px 82px; margin-top: -8px; }
+.beyond-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 2px; }
+.beyond-links .cert-link { margin-top: 4px; }
+@media (max-width: 960px) { .honors { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 820px) { .honors { grid-template-columns: 1fr; } .role-extra { padding-left: 22px; } }
+
+.edu-item h4 + p { margin: 0; color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.55; }
 /* ---------- Social buttons (brand colour on hover) ---------- */
 .social svg { flex-shrink: 0; transition: transform .25s; }
 .social:hover svg { transform: scale(1.12); }
