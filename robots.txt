@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devamittran-m.github.io/sitemap.xml
