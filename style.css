@@ -440,6 +440,16 @@ a { color: inherit; }
   .recent-card { grid-template-columns: 1fr; }
 }
 
+/* ---------- Recent activity list ---------- */
+.activity { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.activity li { display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.activity time { font-size: var(--fs-small); font-weight: 600; color: var(--quant); padding-top: 3px; }
+.activity h4 { margin: 0 0 6px; font-size: var(--fs-h4); line-height: 1.35; }
+.activity h4 a { text-decoration: none; }
+.activity h4 a:hover { color: var(--quant); }
+.activity p { margin: 0; color: var(--ink-soft); max-width: 70ch; }
+@media (max-width: 720px) { .activity li { grid-template-columns: 1fr; gap: 4px; } }
+
 /* ---------- Social buttons (brand colour on hover) ---------- */
 .social svg { flex-shrink: 0; transition: transform .25s; }
 .social:hover svg { transform: scale(1.12); }
