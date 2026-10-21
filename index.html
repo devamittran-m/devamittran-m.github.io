@@ -1,460 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devamittran M - Data Scientist Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devamittran M — Data Scientist, Financial Signal Processing</title>
+  <meta name="description" content="Devamittran M — data scientist at Turing and IIT Kanpur student working on financial signal processing and foundation models. CFA Level I candidate.">
+  <meta property="og:title" content="Devamittran M">
+  <meta property="og:description" content="Data scientist working on financial signal processing and foundation models.">
+  <meta property="og:image" content="https://devamittran-m.github.io/artifacts/profile.png">
+  <meta property="og:url" content="https://devamittran-m.github.io/">
+  <link rel="icon" href="artifacts/profile.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span>Devamittran M</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">  Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-  <label class="switch">
-    <input type="checkbox" id="theme-switch">
-    <span class="slider round"></span>
-  </label>
-</div>
+  <a class="skip" href="#main">Skip to content</a>
 
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+  <header class="topbar">
+    <a class="wordmark" href="#top">Devamittran M</a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+    </button>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Devamittran M</h1>
-                    <h2 class="hero-subtitle">Data Scientist | Turing Developer</h2>
-                    <p class="hero-description">
-                        Passionate Data Scientist specializing in AI/ML development and backend systems. 
-                        Currently collaborating with Google on Gemini AI training at Turing.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn--primary">View Projects</a>
-                        <button class="btn btn--outline" id="download-resume">
-                            <i class="fas fa-download"></i> Download Resume
-                        </button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
-            </div>
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>Devamittran M</h1>
+        <p class="lede">I work on pulling signal out of noisy financial data — and on what foundation models change about that.</p>
+        <p class="hero-facts">Data Scientist at Turing. Student at IIT Kanpur. CFA Level I candidate.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" id="resume-link" href="resume.pdf" download>Download resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/devamittran-m-2723a3269/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/devamittran-m" target="_blank" rel="noopener">GitHub</a>
         </div>
+      </div>
+
+      <!-- PROFILE PICTURE: replace artifacts/profile.png in the repo, or change this src -->
+      <figure class="portrait">
+        <img src="artifacts/profile.png" alt="Portrait of Devamittran M" width="320" height="320"
+             onerror="this.parentElement.classList.add('no-photo')">
+        <span class="initials" aria-hidden="true">DM</span>
+      </figure>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate Data Scientist with expertise in machine learning, AI development, and backend systems. 
-                        Currently working at Turing, I have the privilege of collaborating with Google as the client, 
-                        contributing to the backend of training 'Gemini' AI models.
-                    </p>
-                    <p>
-                        My journey in data science combines technical excellence with practical problem-solving. 
-                        I'm dedicated to solving complex business problems through data-driven insights and innovative AI solutions, 
-                        always staying at the forefront of technological advancement.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-briefcase"></i>
-                            <div>
-                                <h4>Current Role</h4>
-                                <p>Data Scientist at Turing</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-star"></i>
-                            <div>
-                                <h4>Specialization</h4>
-                                <p>Backend Development for Gemini AI Training</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>India</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Signature: noisy series vs filtered estimate -->
+    <section class="signal" aria-label="Illustration: a noisy price series and its filtered estimate">
+      <canvas id="signal-canvas" aria-hidden="true"></canvas>
+      <div class="signal-caption">
+        <p><span class="key key-noise"></span>Observed series <span class="key key-signal"></span>Filtered estimate</p>
+        <button type="button" class="text-btn" id="resample">Draw a new sample</button>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Technical competencies and tools I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming Languages</h3>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">R</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">Java</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>Machine Learning</h3>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-item">Scikit-learn</span>
-                        <span class="skill-item">TensorFlow</span>
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">Keras</span>
-                        <span class="skill-item">XGBoost</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>Data Analysis</h3>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-item">Pandas</span>
-                        <span class="skill-item">NumPy</span>
-                        <span class="skill-item">Matplotlib</span>
-                        <span class="skill-item">Seaborn</span>
-                        <span class="skill-item">Plotly</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Big Data & Databases</h3>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-item">Apache Spark</span>
-                        <span class="skill-item">Hadoop</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">Redis</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud Platforms</h3>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Google Cloud Platform</span>
-                        <span class="skill-item">Azure</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Kubernetes</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Tools & Technologies</h3>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-item">Jupyter</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Tableau</span>
-                        <span class="skill-item">Power BI</span>
-                        <span class="skill-item">MLflow</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ============ ABOUT ============ -->
+    <section class="row" id="about">
+      <h2>About</h2>
+      <div class="content prose">
+        <p>I'm a data scientist at Turing, where I work with Google as the client on the backend of training the Gemini models. Alongside that, I'm at IIT Kanpur, where my focus has shifted toward financial signal processing: estimation, filtering and forecasting on market data.</p>
+        <p>The question I keep coming back to is how large pretrained models — trained on text or on huge collections of time series — fit into a field built on classical statistical methods. My literature survey is where I'm working that out.</p>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Showcase of my data science work</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-project="1">
-                    <div class="project-header">
-                        <h3>Gemini AI Training Backend System</h3>
-                        <span class="project-category">AI/ML Engineering</span>
-                    </div>
-                    <p class="project-description">
-                        Contributed to the backend infrastructure for Google's Gemini AI model training pipeline at Turing. 
-                        Developed scalable data processing systems and optimized training workflows.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">GCP</span>
-                        <span class="tech-tag">Kubernetes</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/devamittran-m/gemini-training-backend" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://demo.example.com/gemini-project" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-project="2">
-                    <div class="project-header">
-                        <h3>Customer Churn Prediction Model</h3>
-                        <span class="project-category">Machine Learning</span>
-                    </div>
-                    <p class="project-description">
-                        Built an end-to-end machine learning pipeline to predict customer churn for a telecommunications company, 
-                        achieving 92% accuracy with ensemble methods.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Docker</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/devamittran-m/customer-churn-prediction" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://churn-predictor.herokuapp.com" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-project="3">
-                    <div class="project-header">
-                        <h3>Real-time Sentiment Analysis Dashboard</h3>
-                        <span class="project-category">NLP & Analytics</span>
-                    </div>
-                    <p class="project-description">
-                        Developed a real-time sentiment analysis system for social media monitoring using NLP techniques 
-                        and streaming data processing.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Apache Kafka</span>
-                        <span class="tech-tag">NLTK</span>
-                        <span class="tech-tag">Streamlit</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/devamittran-m/sentiment-analysis-dashboard" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://sentiment-dashboard.streamlit.app" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-project="4">
-                    <div class="project-header">
-                        <h3>Time Series Forecasting for Sales Prediction</h3>
-                        <span class="project-category">Time Series Analysis</span>
-                    </div>
-                    <p class="project-description">
-                        Created a comprehensive forecasting system for retail sales prediction using advanced time series models 
-                        and external factors.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Prophet</span>
-                        <span class="tech-tag">ARIMA</span>
-                        <span class="tech-tag">Plotly</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/devamittran-m/sales-forecasting" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://sales-forecast-demo.herokuapp.com" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ============ RESEARCH ============ -->
+    <section class="row" id="research">
+      <h2>Research</h2>
+      <div class="content">
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Foundation models in financial signal processing</h3>
+            <span class="status">Literature survey, in progress</span>
+          </div>
+          <p>A survey of how foundation models — large pretrained time-series and language models — are being applied to financial signals, where they improve on classical methods, and where they don't yet hold up.</p>
+          <p class="muted">The write-up will be posted here when it's ready.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">My career journey</p>
-            </div>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-dot"></div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <h3>Data Scientist</h3>
-                            <span class="experience-company">Turing</span>
-                            <span class="experience-duration">2023 - Present</span>
-                        </div>
-                        <p class="experience-description">
-                            Working on AI/ML projects in collaboration with Google, focusing on backend development 
-                            for Gemini AI training systems.
-                        </p>
-                        <div class="experience-achievements">
-                            <h4>Key Achievements:</h4>
-                            <ul>
-                                <li>Contributed to Google's Gemini AI training infrastructure</li>
-                                <li>Optimized large-scale data processing pipelines</li>
-                                <li>Collaborated with international teams on cutting-edge AI research</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="row" id="experience">
+      <h2>Experience</h2>
+      <div class="content">
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Data Scientist, Turing</h3>
+            <span class="status">2023 – present</span>
+          </div>
+          <p>Backend work for Gemini model training, with Google as the client.</p>
+          <ul>
+            <li>Contributing to data-processing pipelines that feed large-scale model training</li>
+            <li>Optimising large-scale data workflows</li>
+            <li>Working with distributed, international teams</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>devamittran.m@example.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>India</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/devamittran-m/" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/devamittran-m" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                        <div class="error-message" id="name-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                        <div class="error-message" id="email-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-control" required>
-                        <div class="error-message" id="subject-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-                        <div class="error-message" id="message-error"></div>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <!-- ============ CREDENTIALS ============ -->
+    <section class="row" id="credentials">
+      <h2>Education and credentials</h2>
+      <div class="content">
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Indian Institute of Technology Kanpur</h3>
+            <span class="status">Current</span>
+          </div>
+                  </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>CFA Level I Candidate</h3>
+            <span class="status">Exam February 2027</span>
+          </div>
+          <p>CFA Institute. Registered for the Level I exam, covering ethics, quantitative methods, economics, financial reporting, equity, fixed income, derivatives and portfolio management.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Devamittran M. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/devamittran-m/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/devamittran-m" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- ============ PROJECTS ============ -->
+    <section class="row" id="projects">
+      <h2>Projects</h2>
+      <div class="content">
+        <article class="entry">
+          <div class="entry-head">
+            <h3><a href="https://github.com/devamittran-m/Text-Classification-on-Consumer-Complaint-Dataset" target="_blank" rel="noopener">Consumer complaint text classification</a></h3>
+            <span class="status">Python, NLP</span>
+          </div>
+          <p>Text classification on a consumer complaint dataset, in a Jupyter notebook.</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3><a href="https://github.com/devamittran-m/Java-Rest-API-with-Frontend-UI" target="_blank" rel="noopener">Task manager REST API with web UI</a></h3>
+            <span class="status">Java, JavaScript</span>
+          </div>
+          <p>A Java REST API for searching, creating and deleting tasks, with a browser front end on top. <a href="https://github.com/devamittran-m/Java-REST-API-example" target="_blank" rel="noopener">API-only version</a>.</p>
+        </article>
+        <p class="muted next">New projects on financial time series are in progress and will be added here.</p>
+      </div>
+    </section>
 
-    <!-- Project Modal -->
-    <div class="modal hidden" id="project-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modal-title"></h3>
-                <button class="modal-close" id="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div id="modal-content"></div>
-            </div>
-        </div>
-    </div>
+    <!-- ============ SKILLS ============ -->
+    <section class="row" id="skills">
+      <h2>Skills</h2>
+      <div class="content">
+        <dl class="skills">
+          <div><dt>Languages</dt><dd>Python, R, SQL, JavaScript, Java</dd></div>
+          <div><dt>Machine learning</dt><dd>scikit-learn, PyTorch, TensorFlow, Keras, XGBoost</dd></div>
+          <div><dt>Data analysis</dt><dd>pandas, NumPy, Matplotlib, Seaborn, Plotly</dd></div>
+          <div><dt>Data and infrastructure</dt><dd>Apache Spark, PostgreSQL, MongoDB, Docker, Google Cloud Platform, AWS</dd></div>
+          <div><dt>Tools</dt><dd>Jupyter, Git, MLflow, Tableau, Power BI</dd></div>
+        </dl>
+      </div>
+    </section>
 
-    <script src="app.js"></script>
-    <script>
-  const toggle = document.getElementById('theme-switch');
-  const html = document.documentElement;
+    <!-- ============ CONTACT ============ -->
+    <section class="row" id="contact">
+      <h2>Contact</h2>
+      <div class="content prose">
+        <p>The best way to reach me is a message on <a href="https://www.linkedin.com/in/devamittran-m-2723a3269/" target="_blank" rel="noopener">LinkedIn</a>. I'm happy to talk about financial signal processing, time-series models, or research collaborations.</p>
+        <p>Code is on <a href="https://github.com/devamittran-m" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </section>
+  </main>
 
-  function applyTheme(theme) {
-    html.setAttribute('data-color-scheme', theme);
-    localStorage.setItem('theme', theme);
-    toggle.checked = theme === 'dark';
-  }
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Devamittran M</p>
+  </footer>
 
-  // Load theme from localStorage
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme);
-
-  // Handle toggle
-  toggle.addEventListener('change', () => {
-    const newTheme = toggle.checked ? 'dark' : 'light';
-    applyTheme(newTheme);
-  });
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
