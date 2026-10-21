@@ -25,7 +25,7 @@
     .then((r) => { if (!r.ok) throw new Error('missing'); })
     .catch(() => {
       resume.removeAttribute('download');
-      resume.href = 'https://lnkd.in/p/dVgib6i5';
+      resume.href = 'https://www.linkedin.com/in/devamittran-m/';
       resume.target = '_blank';
       resume.rel = 'noopener';
       resume.textContent = 'Resume on request';

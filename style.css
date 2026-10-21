@@ -308,6 +308,29 @@ a { color: inherit; }
 }
 .email-big:hover { background-size: 100% 2px; }
 
+/* ---------- Social buttons (brand colour on hover) ---------- */
+.social svg { flex-shrink: 0; transition: transform .25s; }
+.social:hover svg { transform: scale(1.12); }
+.s-linkedin { --brand: #0A66C2; --brand-ink: #FFFFFF; }
+.s-github { --brand: #F0F6FC; --brand-ink: #0D1117; }
+:root[data-theme="light"] .s-github { --brand: #24292F; --brand-ink: #FFFFFF; }
+.social.s-linkedin:hover, .social.s-github:hover,
+.icon-social.s-linkedin:hover, .icon-social.s-github:hover {
+  background: var(--brand); border-color: var(--brand); color: var(--brand-ink);
+}
+.footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.footer-social { display: flex; gap: 10px; }
+.icon-social {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--bg-2); border: 1.5px solid var(--line); color: var(--ink);
+  transition: background-color .2s, color .2s, border-color .2s, transform .2s;
+}
+.icon-social:hover { transform: translateY(-2px); }
+.paper-link { text-decoration: none; background-image: linear-gradient(var(--quant), var(--quant)); background-size: 100% 2px; background-position: 0 100%; background-repeat: no-repeat; }
+.paper-link:hover { color: var(--quant); }
+.read-link { font-weight: 600; font-size: var(--fs-small); color: var(--quant); text-underline-offset: 3px; }
+
 .footer { padding-top: 28px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: var(--fs-small); }
 .footer p { margin: 0; }
 
